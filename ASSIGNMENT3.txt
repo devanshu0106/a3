@@ -1,0 +1,137 @@
+QUES1: WAP to print the pattern
+ANS
+class Pattern
+{
+	public static void main (String args[])
+	{
+        	int i , k;
+		for(i=5; i>0; --i)
+      		{
+			for(k=1; k<=i; ++k)
+			{
+				System.out.print(" * ");
+      			}
+            			System.out.println( );
+  		}
+	}
+}
+
+QUES2: WAP to print even numbers upto n
+ANS
+       
+package javaapplication3;
+import java.util.Scanner;
+class Even
+{
+    public static void main(String[] args)
+    {
+        System.out.println("enter the number");
+        Scanner scan = new Scanner(System.in);       
+        int n=scan.nextInt();
+            
+            for (int i=1; i<=n; i++)
+                {
+                    if(i%2==0)
+                
+                    {
+                        System.out.println(i + " ");
+                    }
+            
+                    
+                }   
+    }
+}
+QUES3: WAP to write n prime numbers
+ANS
+
+package javaapplication3;
+import java.util.Scanner;
+class Prime
+{
+    public static void main(String[] args)
+    {
+        System.out.println("enter the number");
+        Scanner scan = new Scanner(System.in);       
+        int n=scan.nextInt();
+       
+        int flag=1;
+        int num=3;
+        if (n>=1)
+        {
+           System.out.println("first"+n+"prime number are");
+           System.out.println(2);
+           
+        }
+            for(int i=2; i<=n; )
+            {
+                for(int j=2;j<=Math.sqrt(num);j++)
+                {
+                    if (num%j==0)
+                    {
+                        flag=0;
+                        break;
+                    }
+                }
+                    if ( flag !=0)
+                {
+                    System.out.println(num);
+                    i++;
+            }
+                flag=1;
+                num++;
+        }
+    }
+}   
+
+QUES4: WAP to reverse a number.
+ANS
+package javaapplication3;
+import java.util.Scanner;
+class Reverse
+{
+public static void main(String[] args)
+	 {
+            System.out.println("enter the number");
+            Scanner scan = new Scanner(System.in);
+            int num=scan.nextInt();
+	    int reversed = 0;
+	    while(num != 0)
+		 {
+            		int digit = num % 10;
+            		reversed = reversed * 10 + digit;
+            		num=num/10;
+         	 }
+
+     		         System.out.println("Reversed Number: " + reversed);
+    	}
+}
+
+QUES5:WAP to check Armstrong Number.
+ANS
+
+package javaapplication3;
+import java.util.Scanner;
+class ArmstrongExample
+{  
+  public static void main(String[] args)  
+  {  
+    System.out.println("enter the number");
+    Scanner scan = new Scanner(System.in);
+    int n=scan.nextInt();
+    int c=0,a,temp; 
+    temp=n;  
+    while(n>0)  
+    {  
+        a=n%10;  
+        n=n/10;  
+        c=c+(a*a*a);  
+    }  
+        if(temp==c)  
+        System.out.println("armstrong number");   
+        else  
+        System.out.println("Not armstrong number");   
+   }  
+}  
+
+
+
